@@ -1,0 +1,16 @@
+<h1>Edit your recipes budday</h1>
+<form action="/recipes/<%= @recipe.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+
+<label for="name">New recipe name</label>
+<input id="name" type="text" name="name" value="<%= @recipe.name %>">
+
+<label for="new_ingredients">New recipe ingredients</label>
+<textarea id="new_ingredients"  name="ingredients" value="<%= @recipe.ingredients %>">
+</textarea>
+
+<label for="cook_time">New cooktime</label>
+<input id="new_cooktime" type="text" name="cook_time" value="<%= @recipe.cook_time %>">
+
+<input type="submit" id="Submit">
+</form>
